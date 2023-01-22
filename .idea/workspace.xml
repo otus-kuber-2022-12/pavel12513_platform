@@ -19,16 +19,14 @@
     <select>
       <path>
         <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
-        <item name="LOCAL_ROOT" type="e8cecc67:BranchNodeDescriptor" />
-        <item name="BRANCH:kubernetes-intro" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="GROUP_NODE:origin" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="BRANCH:origin/kubernetes-prepare" type="e8cecc67:BranchNodeDescriptor" />
       </path>
     </select>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="2effc37c-d2bc-4db2-ad4a-c55afeeb7475" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/web/default.conf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/dockerfile" afterDir="false" />
-    </list>
+    <list default="true" id="2effc37c-d2bc-4db2-ad4a-c55afeeb7475" name="Default Changelist" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -107,7 +105,7 @@
                   <entry key="branch">
                     <value>
                       <list>
-                        <option value="kubernetes-intro" />
+                        <option value="origin/kubernetes-prepare" />
                       </list>
                     </value>
                   </entry>
