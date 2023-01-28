@@ -17,7 +17,7 @@ spec:
     spec:
       containers:
         - name: server
-          image: pavel12513/pavel12513_frontend:v0.01
+          image: pavel12513/pavel12513_frontend:latest
           resources: {}
           env:
             - name: PORT
