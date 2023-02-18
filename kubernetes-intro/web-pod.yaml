@@ -9,9 +9,9 @@ spec:
     - name: web
       image: pavel12513/pavel12513_outus_lesson1:v01
       readinessProbe:
-      #        httpGet:
-      #          path: /index.html
-      #          port: 80
+        httpGet:
+          path: /index.html
+          port: 80
       livenessProbe:
         tcpSocket:
           port: 8000
