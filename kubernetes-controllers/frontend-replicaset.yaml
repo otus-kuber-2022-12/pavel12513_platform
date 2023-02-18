@@ -5,7 +5,7 @@ metadata:
   labels:
     app: frontend
 spec:
-  replicas: 1
+  replicas: 3
   selector:
     matchLabels:
       tier: frontend
@@ -17,7 +17,7 @@ spec:
     spec:
       containers:
         - name: server
-          image: pavel12513/pavel12513_frontend:v0.02
+          image: pavel12513/pavel12513_frontend:latest
           resources: {}
           env:
             - name: PORT
