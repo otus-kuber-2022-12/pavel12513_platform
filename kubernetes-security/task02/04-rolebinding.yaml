@@ -8,5 +8,5 @@ roleRef:
   name: getlistwatch # имя Role или ClusterRole к котором мы биндимся
 subjects:
   - apiGroup: rbac.authorization.k8s.io
-    kind: Group
-    name: system:serviceaccounts:prometheus
+    kind: User
+    name: carol
