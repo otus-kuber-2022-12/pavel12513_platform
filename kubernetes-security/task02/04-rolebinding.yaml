@@ -4,7 +4,7 @@ metadata:
   name: RoleBinding-carol # Под этим именем увидим созданный RoleBinding
 subjects:
   - kind: ServiceAccount # Указываем к чему привязываемся Role, ServiceAccount
-    name: system:serviceaccount:prometheus:carol
+    name: carol
     namespace: prometheus
 roleRef:
   apiGroup: rbac.authorization.k8s.io
