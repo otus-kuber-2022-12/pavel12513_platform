@@ -1,5 +1,5 @@
 apiVersion: rbac.authorization.k8s.io/v1
-kind: RoleBinding
+kind: ClusterRoleBinding
 metadata:
   name: RoleBinding-carol # Под этим именем увидим созданный RoleBinding
 roleRef:
