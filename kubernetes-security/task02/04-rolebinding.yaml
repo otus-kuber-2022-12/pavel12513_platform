@@ -2,11 +2,11 @@ apiVersion: rbac.authorization.k8s.io/v1
 kind: RoleBinding
 metadata:
   name: RoleBinding-carol # Под этим именем увидим созданный RoleBinding
-subjects:
-  - kind: ServiceAccount # Указываем к чему привязываемся Role, ServiceAccount
-    name: carol
-    namespace: prometheus
 roleRef:
   apiGroup: rbac.authorization.k8s.io
   kind: ClusterRole # К чему привязываемся
   name: edit-prometheus # имя Role или ClusterRole к котором мы биндимся
+subjects:
+  - kind: ServiceAccount # Указываем к чему привязываемся Role, ServiceAccount
+    name: carol
+    namespace: prometheus
