@@ -5,8 +5,8 @@ metadata:
 roleRef:
   apiGroup: rbac.authorization.k8s.io
   kind: ClusterRole # К чему привязываемся
-  name: edit-prometheus # имя Role или ClusterRole к котором мы биндимся
+  name: prometheus # имя Role или ClusterRole к котором мы биндимся
 subjects:
-  - kind: ServiceAccount # Указываем к чему привязываемся Role, ServiceAccount
+  - apiGroup: rbac.authorization.k8s.io
+    kind: ServiceAccount # Указываем к чему привязываемся Role, ServiceAccount
     name: carol
-    namespace: prometheus
