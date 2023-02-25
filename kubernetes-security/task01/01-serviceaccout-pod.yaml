@@ -2,8 +2,8 @@
 apiVersion: rbac.authorization.k8s.io/v1
 kind: ClusterRole
 metadata:
-  namespace: bob
-  name: admin
+  namespace: default
+  name: bob
 ---
 apiVersion: rbac.authorization.k8s.io/v1
 kind: ClusterRoleBinding
