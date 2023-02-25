@@ -9,4 +9,3 @@ roleRef:
 subjects:
   - kind: ServiceAccount # Указываем к чему привязываемся Role, ServiceAccount
     name: carol
-    apiGroup: rbac.authorization.k8s.io
