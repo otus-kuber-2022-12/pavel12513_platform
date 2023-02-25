@@ -3,6 +3,6 @@ kind: ClusterRole
 metadata:
   name: edit-prometheus
 rules:
-  - apiGroups: [""]
-    resources: ["pods"]
-    verbs: ["list", "get", "watch"]
+  - apiGroups: [""] # 1st API group
+    resources: ["pods","services","namespaces","deployments","jobs"]
+    verbs: ["get", "list", "watch", "create", "patch", "delete", "update"]
