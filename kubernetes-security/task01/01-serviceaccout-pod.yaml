@@ -1,25 +1,30 @@
----
-apiVersion: rbac.authorization.k8s.io/v1
-kind: ClusterRole
-metadata:
-  namespace: default
-  name: bob
----
-apiVersion: rbac.authorization.k8s.io/v1
-kind: ClusterRoleBinding
-metadata:
-  name: admin # Под этим именем увидим созданный RoleBinding
-  namespace: default
-subjects:
-  - kind: ServiceAccount # Указываем к чему привязываемся Role, ServiceAccount
-    name: bob
-roleRef:
-  apiGroup: rbac.authorization.k8s.io
-  kind: Role # К чему привязываемся
-  name: bob # имя Role иди ClusterRole к котором мы биндимся
----
 apiVersion: v1
 kind: ServiceAccount
 metadata:
   name: bob
-  namespace: default
+
+---
+apiVersion: rbac.authorization.k8s.io/v1
+kind: ClusterRole
+metadata:
+  # namespace не применяется в ClusterRole по понятным причинам
+  name: admin
+rules:
+  - apiGroups: [""] # 1st API group
+    resources: ["pods","services","namespaces","deployments","jobs"]
+    verbs: ["get", "list", "watch", "create", "patch", "delete", "update"]
+
+---
+apiVersion: rbac.authorization.k8s.io/v1
+kind: ClusterRoleBinding
+metadata:
+  name: rolebinding:bob-admin
+
+roleRef:
+  apiGroup: rbac.authorization.k8s.io
+  kind: ClusterRole
+  name: admin
+subjects:
+  - kind: ServiceAccount
+    name: bob
+    namespace: default
